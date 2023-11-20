@@ -173,7 +173,7 @@ Process {
 	if (($TSEnvironment -ne $null) -and ($TSEnvironment.Value("_SMSTSinWinPE") -eq $true)) {
 		try {
 			# Start flash update process
-			$FlashProcess = Start-Process -FilePath $FlashUtility -ArgumentList "$FlashSwitches" -Passthru -Wait
+            $FlashProcess = Start-Process -FilePath $FlashUtility -ArgumentList "$FlashSwitches" -Passthru -Wait
 			
 			#Output Exit Code for testing purposes
 			$FlashProcess.ExitCode | Out-File -FilePath $LogFilePath
